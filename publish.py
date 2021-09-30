@@ -38,5 +38,5 @@ template = jinja2.Template("""<!DOCTYPE html>
 output_html = template.render(dataframe=df.to_html(table_id="myTable", index=False, escape=False))
 
 # Write generated HTML to file.
-with open("index.html", "w", encoding="utf-8") as file_obj:
+with open("build/index.html", "w", encoding="utf-8") as file_obj:
     file_obj.write(output_html)
