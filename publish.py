@@ -26,8 +26,8 @@ template = jinja2.Template("""<!DOCTYPE html>
     <body>
 
         <p>This websites lists Danish Life Science Research core facilities in an easy to search format.
-        Please contact <a href="mailto:niso@dtu.dk">niso@dtu.dk</a> if you are leading a core facility
-        in Denmark and would like to add it to this list.</p>
+        Please contact Nikolaus Sonnenschein (<a href="mailto:niso@dtu.dk">niso@dtu.dk</a>) or Magali Michaut (<a href="mailto:magali.michaut@sund.ku.dk">magali.michaut@sund.ku.dk</a>) if you are leading a core facility
+        in Denmark and would like to add it to this list. For inquiries to the respective facilities, please contact them directly by using the contact information provided on their websites.</p>
 
         {{ dataframe }}
 
