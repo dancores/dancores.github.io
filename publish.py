@@ -4,9 +4,9 @@ import jinja2
 SHEET_URL = "https://docs.google.com/spreadsheets/d/1DqCJy4qOGNR4UD-PLHOQwyByDBlHdS4NLL-_jd4JS9U/export?format=csv"
 
 df = pd.read_csv(SHEET_URL)
-df = df.drop(['Timestamp'], axis=1)
+df = df.drop(['Timestamp', 'Contact email'], axis=1)
 df.Website = df.Website.apply(lambda url: f'<a href="{url}">{url}</a>')
-df['Contact email'] = df['Contact email'].apply(lambda email: f'<a href="mailto:{email}">{email}</a>')
+# df['Contact email'] = df['Contact email'].apply(lambda email: f'<a href="mailto:{email}">{email}</a>')
 
 
 # Generate HTML from template.
