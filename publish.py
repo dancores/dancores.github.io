@@ -20,9 +20,14 @@ template = jinja2.Template("""<!DOCTYPE html>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./table-style.css">
     </head>
     <h1>Danish Core Facilities</h1>
     <body>
+
+        <p>This websites lists Danish Life Science Research core facilities in an easy to search format.
+        Please contact <a href="mailto:niso@dtu.dk">niso@dtu.dk</a> if you are leading a core facility
+        in Denmark and would like to add it to this list.</p>
 
         {{ dataframe }}
 
@@ -33,9 +38,9 @@ template = jinja2.Template("""<!DOCTYPE html>
     </script>
 
 </html>"""
-                               )
+)
 
-output_html = template.render(dataframe=df.to_html(table_id="myTable", index=False, escape=False))
+output_html = template.render(dataframe=df.to_html(table_id="myTable", index=False, escape=False, border = 0))
 
 # Write generated HTML to file.
 with open("build/index.html", "w", encoding="utf-8") as file_obj:
