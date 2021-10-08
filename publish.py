@@ -7,7 +7,6 @@ df = pd.read_csv(SHEET_URL)
 df = df.drop(['Timestamp', 'Contact email'], axis=1)
 df = df.reindex(columns=['Core facility name', 'Services', 'Equipment', 'Expertise','Website', 'Address',
        'Organization', 'Access model'])
-print(df.columns)
 df.Website = df.Website.apply(lambda url: f'<a href="{url}">{url}</a>')
 # df['Contact email'] = df['Contact email'].apply(lambda email: f'<a href="mailto:{email}">{email}</a>')
 
@@ -24,9 +23,8 @@ template = jinja2.Template("""<!DOCTYPE html>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./table-style.css">
     </head>
-    <h1>Danish Core Facilities</h1>
+    <h1>🇩🇰 Danish Life Science Research Core Facilities 👩‍🔬 🧬 🔬 🧪 📊 🦾 🦠 🧫 👨‍🔬</h1>
     <body>
 
         <p>This websites lists Danish Life Science Research core facilities in an easy to search format.
