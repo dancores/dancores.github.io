@@ -7,6 +7,7 @@
     <title>Demo</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./table-style.css">
     </head>
@@ -17,16 +18,17 @@
         Please contact Nikolaus Sonnenschein (<a href="mailto:niso@dtu.dk">niso@dtu.dk</a>) or Magali Michaut (<a href="mailto:magali.michaut@sund.ku.dk">magali.michaut@sund.ku.dk</a>) if you are leading a core facility
         in Denmark and would like to add it to this list. For inquiries to the respective facilities, please contact them directly by using the contact information provided on their websites.</p>
 
-        <table border="0" class="dataframe" id="myTable">
+        <div class="table-responsive">
+            <table border="0" class="dataframe table table-striped" id="myTable">
   <thead>
     <tr style="text-align: right;">
       <th>Core facility name</th>
       <th>Services</th>
       <th>Equipment</th>
       <th>Expertise</th>
+      <th>Website</th>
       <th>Address</th>
       <th>Organization</th>
-      <th>Website</th>
       <th>Access model</th>
     </tr>
   </thead>
@@ -36,9 +38,9 @@
       <td>In vivo imaging based on luminescence</td>
       <td>In Vivo Imaging System (IVIS) Lumina II, Caliper/Perkin Elmer</td>
       <td>The facility only provides access to the IVIS system and data analysis software (no experiment performed for subparties).\n\nThe facility also provides scientific support on specific projects.</td>
+      <td><a href="https://www.bric.ku.dk/core-facilities/in-vivo-imaging/">https://www.bric.ku.dk/core-facilities/in-vivo-imaging/</a></td>
       <td>Biocenter's animal facility</td>
       <td>University of Copenhagen</td>
-      <td><a href="https://www.bric.ku.dk/core-facilities/in-vivo-imaging/">https://www.bric.ku.dk/core-facilities/in-vivo-imaging/</a></td>
       <td>Internal</td>
     </tr>
     <tr>
@@ -46,9 +48,9 @@
       <td>Microscopy, Liquid handling, screening, CRISPR, acoustic dispensing</td>
       <td>ImageXpressHT Confocal, Hamilton Starlet, Incucyte, INCell2200, Echo Acoustic dispenser, whole genome arrayed sgRNA library</td>
       <td>High content screening, automated liquid handling, image data analysis, siRNA screening,  CRISPR screening</td>
+      <td><a href="https://www.bric.ku.dk/core-facilities/high-content-crispr-screens-hccs/">https://www.bric.ku.dk/core-facilities/high-content-crispr-screens-hccs/</a></td>
       <td>Biocenter, Ole Maaløes vej 5 Copenhagen</td>
       <td>University of Copenhagen</td>
-      <td><a href="https://www.bric.ku.dk/core-facilities/high-content-crispr-screens-hccs/">https://www.bric.ku.dk/core-facilities/high-content-crispr-screens-hccs/</a></td>
       <td>Open Access</td>
     </tr>
     <tr>
@@ -56,9 +58,9 @@
       <td>Sequencing</td>
       <td>Illumina NextSeq 500, 10X Chromium, Agilent bravo, Agilent Fragment Analyser</td>
       <td>sequencing, genomics, bioinformatics</td>
+      <td><a href="https://danstem.ku.dk/platforms/sequencing-platform/">https://danstem.ku.dk/platforms/sequencing-platform/</a></td>
       <td>Copenhagen (Panum)</td>
       <td>University of Copenhagen</td>
-      <td><a href="https://danstem.ku.dk/platforms/sequencing-platform/">https://danstem.ku.dk/platforms/sequencing-platform/</a></td>
       <td>Internal</td>
     </tr>
     <tr>
@@ -66,9 +68,9 @@
       <td>Genetically modified mouse models</td>
       <td>NaN</td>
       <td>1) Genetic modification of the mouse embryo. 2) Derivation, culture and modification os mouse embryonic stem cells. 3) Mouse embryo culture, manipulation and transfer. 4) Cryopreservation of mouse sperm and embryos. 5) Mouse in vitro fertilization.</td>
+      <td><a href="https://transgenicmice.ku.dk/">https://transgenicmice.ku.dk/</a></td>
       <td>Copenhagen</td>
       <td>University of Copenhagen</td>
-      <td><a href="https://transgenicmice.ku.dk/">https://transgenicmice.ku.dk/</a></td>
       <td>Open Access</td>
     </tr>
     <tr>
@@ -76,9 +78,9 @@
       <td>Microscopy, Bioimage analysis</td>
       <td>Light microscopes for widefield, confocal, live cell and high-content imaging. Computer workstations and licenses for image analysis software required for image analysis of all microscopy data (3D, high-content, cell tracking)</td>
       <td>The Protein Imaging Platform is providing hands-on support and training on various microscopes and training for image and data analysis from basic to advanced level.</td>
+      <td><a href="https://www.cpr.ku.dk/research/facilities/protein-imaging/">https://www.cpr.ku.dk/research/facilities/protein-imaging/</a></td>
       <td>Copenhagen</td>
       <td>University of Copenhagen</td>
-      <td><a href="https://www.cpr.ku.dk/research/facilities/protein-imaging/">https://www.cpr.ku.dk/research/facilities/protein-imaging/</a></td>
       <td>Internal</td>
     </tr>
     <tr>
@@ -86,9 +88,9 @@
       <td>Sequencing, Bioinformatics, Library preparations</td>
       <td>NovaSeq6000, NextSeq550, 10X chromium Controller, Sciclone IQ, Fragment Analyzer, TapeStation</td>
       <td>NGS, Single-Cell, data analysis, Epigenetics</td>
+      <td><a href="https://cbmr.ku.dk/researchfacilities/single-cell-omics/">https://cbmr.ku.dk/researchfacilities/single-cell-omics/</a></td>
       <td>Copenhagen, Mærsk Tower</td>
       <td>University of Copenhagen</td>
-      <td><a href="https://cbmr.ku.dk/researchfacilities/single-cell-omics/">https://cbmr.ku.dk/researchfacilities/single-cell-omics/</a></td>
       <td>Internal</td>
     </tr>
     <tr>
@@ -96,9 +98,9 @@
       <td>Data Science</td>
       <td>NVIDIA A100</td>
       <td>Data management, Data engineering, Machine Learning, Computational Biology, Mathematical modeling</td>
+      <td><a href="https://www.bioengineering.dtu.dk/english/ResearchNy/Cores">https://www.bioengineering.dtu.dk/english/ResearchNy/Cores</a></td>
       <td>Lyngby</td>
       <td>Technical University of Denmark</td>
-      <td><a href="https://www.bioengineering.dtu.dk/english/ResearchNy/Cores">https://www.bioengineering.dtu.dk/english/ResearchNy/Cores</a></td>
       <td>Open Access</td>
     </tr>
     <tr>
@@ -106,9 +108,9 @@
       <td>Full omics platform</td>
       <td>NaN</td>
       <td>Metabolomics, proteomics, Fluxomics and HPLC platform</td>
+      <td><a href="https://www.biosustain.dtu.dk/">https://www.biosustain.dtu.dk/</a></td>
       <td>DTU campus</td>
       <td>Technical University of Denmark</td>
-      <td><a href="https://www.biosustain.dtu.dk/">https://www.biosustain.dtu.dk/</a></td>
       <td>Also collaborations externally.</td>
     </tr>
     <tr>
@@ -116,9 +118,9 @@
       <td>Sequencing</td>
       <td>NextSeq, MiSeq and GridION</td>
       <td>DNAseq, RNAseq, NGS and Nanopore</td>
+      <td><a href="https://www.biosustain.dtu.dk/ ">https://www.biosustain.dtu.dk/ </a></td>
       <td>Lyngby</td>
       <td>Technical University of Denmark</td>
-      <td><a href="https://www.biosustain.dtu.dk/ ">https://www.biosustain.dtu.dk/ </a></td>
       <td>Internal</td>
     </tr>
     <tr>
@@ -126,9 +128,9 @@
       <td>Microscopy</td>
       <td>Light microscopes</td>
       <td>High throughput screening microscopy, Live cell microscopy, High content microscopy</td>
+      <td><a href="https://danstem.ku.dk/platforms/imaging/">https://danstem.ku.dk/platforms/imaging/</a></td>
       <td>Panum: Danstem/CPR</td>
       <td>University of Copenhagen</td>
-      <td><a href="https://danstem.ku.dk/platforms/imaging/">https://danstem.ku.dk/platforms/imaging/</a></td>
       <td>Open for consulting</td>
     </tr>
     <tr>
@@ -136,9 +138,9 @@
       <td>Sequencing</td>
       <td>NovaSeq6000, MiSeq,</td>
       <td>DNA sequencing, RNA sequencing, Ancient DNA,</td>
+      <td><a href="nan">nan</a></td>
       <td>Bartholinsgade 2, 1356K</td>
       <td>University of Copenhagen</td>
-      <td><a href="nan">nan</a></td>
       <td>Open Access</td>
     </tr>
     <tr>
@@ -146,13 +148,14 @@
       <td>Histology</td>
       <td>NanoZoomer-XR Digital slide scanner C12000-01, CM3050 S Research Cryostat, Microtomes, Lab Vision™ Autostainer 360-2D</td>
       <td>Processing, FFPE sectioning, HE staining, IHC, IF, Special stainings, cryo sectioning, Whole slide imaging</td>
+      <td><a href="https://www.bric.ku.dk/core-facilities/histology-and-microscopy/">https://www.bric.ku.dk/core-facilities/histology-and-microscopy/</a></td>
       <td>BRIC</td>
       <td>University of Copenhagen</td>
-      <td><a href="https://www.bric.ku.dk/core-facilities/histology-and-microscopy/">https://www.bric.ku.dk/core-facilities/histology-and-microscopy/</a></td>
       <td>Open Access</td>
     </tr>
   </tbody>
 </table>
+        </div>
 
     </body>
 
