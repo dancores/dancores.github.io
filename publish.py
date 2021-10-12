@@ -4,7 +4,7 @@ import jinja2
 SHEET_URL = "https://docs.google.com/spreadsheets/d/1DqCJy4qOGNR4UD-PLHOQwyByDBlHdS4NLL-_jd4JS9U/export?format=csv"
 
 df = pd.read_csv(SHEET_URL)
-df = df.drop(['Timestamp', 'Contact email'], axis=1)
+df = df.drop(['Timestamp', 'Contact email (for internal use only)'], axis=1)
 df = df.reindex(columns=['Core facility name', 'Services', 'Equipment', 'Expertise','Website', 'Address',
        'Organization', 'Access model'])
 df.Website = df.Website.apply(lambda url: f'<a href="{url}">{url}</a>')
