@@ -10,16 +10,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     </head>
-    <h1> 🇩🇰 Danish Life Science Research Core Facilities 👩‍🔬 🧬 🔬 🧪 📊 🦾 🦠 🧫 👨‍🔬</h1>
+    
     <body>
-
-        <p>This websites lists Danish Life Science Research core facilities in an easy to search format.
-        Please contact Nikolaus Sonnenschein (<a href="mailto:niso@dtu.dk">niso@dtu.dk</a>) or Magali Michaut (<a href="mailto:magali.michaut@sund.ku.dk">magali.michaut@sund.ku.dk</a>) if you are leading a core facility
-        in Denmark and would like to add it to this list. For inquiries to the respective facilities, please contact them directly by using the contact information provided on their websites.</p>
-
-        <div class="table-responsive">
-            {{ dataframe }}
+      <div class="container">
+        <div class="row">
+          <div class="col-10">
+            <h1> 🇩🇰 Danish Life Science Research Core Facilities<br> 👩‍🔬 🧬 🔬 🧪 📊 🦾 🦠 🧫 👨‍🔬</h1>
+            <p class="lead text-left">
+              <!-- <img src="logo_1.png" class="img-fluid pull-right" style="max-height: 140px; float: left;" alt="logo">   -->
+              This website lists Danish Life Science Research core facilities in an easy to search format.
+              It is brought to you by DanCores, a community of core facility managers and staff.
+              You can add your core facility listed and join the community <a href="https://forms.gle/iY16TL8SymnG4h347">here</a>.
+          </p> 
+          </div>
+          <div class="col-2">
+            <img src="logo_1.png" class="img-fluid pull-right" style="max-height: 180px;" alt="logo">
+          </div>
         </div>
+      </div>
+      
+      <div class="table-responsive">
+          {{ dataframe }}
+      </div>
 
     </body>
 
