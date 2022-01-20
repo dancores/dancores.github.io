@@ -45,3 +45,5 @@ jobs:
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: build
+      
+      - uses: gautamkrishnar/keepalive-workflow@master # using the workflow with default settings
